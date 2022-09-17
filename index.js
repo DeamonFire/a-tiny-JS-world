@@ -28,3 +28,5 @@ import { print } from './js/lib.js';
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
    print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
    */
+
+   print('<b>Що це таке взагалі?</b>')

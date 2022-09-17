@@ -7,26 +7,56 @@ import { print } from './js/lib.js';
    */
 
 // ======== OBJECTS DEFINITIONS ========
-// Define your objects here
+const dog = {
+   species: 'dog',
+   name: 'Azov',
+   gender: 'male',
+   hands: 0,
+   legs: 4,
+   say: 'Glory to Ukraine!'
+};
 
+const cat = {
+   species: 'cat' ,
+   name: 'Izyum',
+   gender: 'female',
+   hands: 0,
+   legs: 4,
+   say: 'Glory to heroes!'
+};
+
+const woman = {
+   species: 'human',
+   name: 'Darynka',
+   gender: 'female',
+   hands: 2,
+   legs: 2,
+   say: 'Glory to the Nation!'
+};
+
+const man = {
+   species: 'human',
+   name: 'Dmytro',
+   gender: 'male',
+   hands: 2,
+   legs: 2,
+   say: 'Death to enemies!'
+};
+
+const catWoman = {
+   species: 'catHuman',
+   name: 'Ania',
+   gender: 'female',
+   hands: 2,
+   legs: 2,
+   say: cat.say
+};
+
+const habitansWorld = [dog, cat, woman, man, catWoman];
+const props = ['species', 'name', 'gender', 'hands', 'legs', 'say'];
 
 // ======== OUTPUT ========
-/* Use print(message) for output.
-   Default tag for message is <pre>. Use print(message,'div') to change containing element tag.
-
-   Message can contain HTML markup. You may also tweak index.html and/or styles.css.
-   However, please, REFRAIN from improving visuals at least until your code is reviewed
-   so code reviewers might focus on a single file that is index.js.
-   */
-
-/* Print examples:
-   print('ABC');
-   print('<strong>ABC</strong>');
-   print('<strong>ABC</strong>', 'div');
-
-   print('human; John; male; 2; 2; Hello world!; Rex, Tom, Jenny');
-   print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
-   print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
-   */
-
-   print('<b>Що це таке взагалі?</b>')
+const residents = habitansWorld
+  .map((habitans) => props.map((prop) => habitans[prop]).join("; "))
+  .join("<br>");
+print(residents, "div");
